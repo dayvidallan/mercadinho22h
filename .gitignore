@@ -38,7 +38,7 @@ migrations/
 ArquivosXML/
 arquivos/
 setup.py
-versailles/configs/configs.py
+configs.py
 versailles/media/imagens/usuarios/
 .env
 .venv/
