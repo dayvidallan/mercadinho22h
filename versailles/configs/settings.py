@@ -16,11 +16,14 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', 'useversailles.herokuapp.com', default=[], cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+if not DEFAULT_DATABASE_URL:
+    DEFAULT_DATABASE_URL = 'sqlite:///' + os.path.join(APP_ROOT, 'db.sqlite3')
 
-DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
+DATABASES = {
+    'default': config('DATABASE_URL', default=DEFAULT_DATABASE_URL, cast=dburl),
+}
 
 
 # Application definition
@@ -123,13 +126,13 @@ USE_TZ = True
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(APP_ROOT, 'static'),
-]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 FIXTURE_DIRS = [
     os.path.join(APP_ROOT, 'fixtures'),
