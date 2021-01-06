@@ -18,12 +18,9 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', 'useversailles.herokuapp.com', default=[], cast=Csv())
 
-if not DEFAULT_DATABASE_URL:
-    DEFAULT_DATABASE_URL = 'sqlite:///' + os.path.join(APP_ROOT, 'db.sqlite3')
+default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
-DATABASES = {
-    'default': config('DATABASE_URL', default=DEFAULT_DATABASE_URL, cast=dburl),
-}
+DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
 
 
 # Application definition
