@@ -127,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(APP_ROOT, 'static'),
+    os.path.join(APP_ROOT, 'static',  'staticfiles'),
 ]
 
 FIXTURE_DIRS = [
