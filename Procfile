@@ -1,1 +1,1 @@
-web: gunicorn versailles.configs.wsgi
+web: gunicorn djangoSIGE.wsgi
