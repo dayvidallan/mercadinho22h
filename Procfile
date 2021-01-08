@@ -1,1 +1,1 @@
-web:  djangoSIGE.wsgi
+web: gunicorn djangoSIGE.wsgi
