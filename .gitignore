@@ -38,8 +38,8 @@ migrations/
 ArquivosXML/
 arquivos/
 setup.py
-versailles/configs/configs.py
-versailles/media/imagens/usuarios/
+djangoSIGE/configs/configs.py
+djangoSIGE/media/imagens/usuarios/
 .env
 .venv/
 *.sqlite3

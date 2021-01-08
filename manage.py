@@ -3,7 +3,7 @@ import os
 import sys
 
 if __name__ == "__main__":
-    settings = 'versailles.tests.test_settings' if 'test' in sys.argv else 'versailles.configs'
+    settings = 'djangoSIGE.tests.test_settings' if 'test' in sys.argv else 'djangoSIGE.configs'
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", settings)
     try:
         from django.core.management import execute_from_command_line
