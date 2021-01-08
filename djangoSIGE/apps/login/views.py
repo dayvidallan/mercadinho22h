@@ -24,7 +24,7 @@ from djangoSIGE.apps.base.views_mixins import SuperUserRequiredMixin
 
 from .forms import UserLoginForm, UserRegistrationForm, PasswordResetForm, SetPasswordForm, PerfilUsuarioForm
 from .models import Usuario
-from djangoSIGE.configs.settings import DEFAULT_FROM_EMAIL
+#from djangoSIGE.configs.settings import DEFAULT_FROM_EMAIL
 
 from djangoSIGE.apps.cadastro.forms import MinhaEmpresaForm
 from djangoSIGE.apps.cadastro.models import MinhaEmpresa
