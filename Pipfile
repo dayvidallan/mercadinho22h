@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "=3.1.5"
+dj-database-url = "==0.5.*"
+python-decouple = "==3.1"
+pytz = "==2018.3"
+reportlab = "==3.5.59"
+six = "==1.11.0"
+cryptography= "==3.3.1"
+lxml = "==4.6.2"
+pyopenssl = "==17.5.0"
+signxml = "==2.8.1"
+
+[requires]
+python_version = "3.9.1"
